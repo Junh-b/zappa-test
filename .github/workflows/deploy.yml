@@ -18,7 +18,7 @@ jobs:
           python-version: '3.8'
 
       - name: Create virtual env
-        run:
+        run: |
           pip install virtualenv
           virtualenv --python=3.8 zappa-deploy-env
           source zappa-deploy-env/bin/activate
@@ -31,12 +31,12 @@ jobs:
           aws-region: ap-northeast-2
 
       - name: Install Dependencies
-        run:
+        run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Deploy with zappa
         env:
           VIRTUAL_ENV: ./tempvenv
-        run:
+        run: |
           zappa deploy dev
