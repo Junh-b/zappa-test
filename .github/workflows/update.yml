@@ -1,4 +1,4 @@
-name: Deploy to Lambda with Zappa
+name: Update Lambda with Zappa
 
 on:
   workflow_dispatch:
