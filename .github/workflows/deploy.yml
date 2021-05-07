@@ -20,7 +20,7 @@ jobs:
           aws-region: ap-northeast-2
 
       - name: Set up python 3.8
-        uses: actions/seup-python@v2
+        uses: actions/setup-python@v2
         with:
           python-version: '3.8'
 
