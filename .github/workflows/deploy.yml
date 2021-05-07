@@ -19,8 +19,9 @@ jobs:
 
       - name: Create virtual env
         run:
-          sudo python -m venv tempvenv
-          source tempvenv/bin/activate
+          pip install virtualenv
+          virtualenv --python=python3.8 zappa-deploy-env
+          source zappa-deploy-env/bin/activate
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
