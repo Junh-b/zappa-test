@@ -5,6 +5,6 @@
         "profile_name": "default",
         "project_name": "djangoexercise",
         "runtime": "python3.8",
-        "s3_bucket": "django-exercise"
+        "s3_bucket": "django-exercise",
     }
 }
