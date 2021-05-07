@@ -40,5 +40,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Deploy with zappa
+        env:
+          VIRTUAL_ENV: ./zappa-deploy-env
         run: |
           zappa deploy dev
