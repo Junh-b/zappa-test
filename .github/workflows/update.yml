@@ -36,6 +36,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          source zappa-deploy-env/bin/activate
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
@@ -43,5 +44,6 @@ jobs:
         env:
           VIRTUAL_ENV: ./zappa-deploy-env
         run: |
-          pip install zappa==0.50.0
+          source zappa-deploy-env/bin/activate
+          pip install zappa
           zappa update dev
