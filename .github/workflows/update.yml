@@ -43,4 +43,5 @@ jobs:
         env:
           VIRTUAL_ENV: ./zappa-deploy-env
         run: |
+          pip install zappa
           zappa update dev
