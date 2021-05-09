@@ -43,6 +43,5 @@ jobs:
         env:
           VIRTUAL_ENV: ./zappa-deploy-env
         run: |
-          pip install zappa==0.51.0
-          pip install Werkzeug==1.0.1
+          pip install zappa==0.50.0
           zappa update dev
