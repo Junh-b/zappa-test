@@ -5,5 +5,9 @@
         "project_name": "djangoexercise",
         "runtime": "python3.8",
         "s3_bucket": "django-exercise",
+        "vpc_config":{
+            "SubnetIds":["subnet-043027682a5bc46ef", "subnet-034db6ca5d4fcf5ed"],
+            "SecurityGroupIds":["sg-0d85fe5b05f50bd7d"]
+        }
     }
 }

@@ -30,7 +30,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '.amazonaws.com',
     '.junhabaek.net',
-    os.environ['API_GATEWAY_URL']
+    os.getenv('API_GATEWAY_URL')
 ]
 
 # Application definition
@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'djangoExercise.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': os.getenv('DB_ENGINE', 'django.db.backends.sqlite3'),
+        'NAME': os.getenv('DB_NAME', BASE_DIR / 'db.sqlite3'),
+        'USER': os.environ.get('DB_USER_NAME'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
     }
 }
 
